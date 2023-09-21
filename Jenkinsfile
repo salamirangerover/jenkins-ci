@@ -10,8 +10,7 @@ pipeline {
 
 	stage('Run') {
             steps {
-                // Запуск приложения, например:
-                sh 'docker run -d -p 8080:8080 <имя_образа>'
+                sh 'docker run -d -p 3005:3001 chatcord'
             }
         }
     }
