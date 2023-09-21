@@ -1,0 +1,17 @@
+{
+    "name": "socket-chat-example",
+    "version": "0.0.1",
+    "description": "my first socket.io app",
+    "dependencies": {
+        "express": "^4.18.2",
+        "socket.io": "^4.6.1"
+    },
+    "devDependencies": {
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0"
+    },
+    "scripts": {
+        "lint": "eslint . --ext js,jsx,ts,tsx --fix",
+        "test": "node server.js"
+    }
+}
