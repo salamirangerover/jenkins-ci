@@ -1,17 +1,23 @@
 {
-    "name": "socket-chat-example",
-    "version": "0.0.1",
-    "description": "my first socket.io app",
-    "dependencies": {
-        "express": "^4.18.2",
-        "socket.io": "^4.6.1"
-    },
-    "devDependencies": {
-        "chai": "^4.3.7",
-        "mocha": "^10.2.0"
-    },
-    "scripts": {
-        "lint": "eslint . --ext js,jsx,ts,tsx --fix",
-        "test": "node server.js"
-    }
+  "name": "chatcord",
+  "version": "1.0.0",
+  "description": "Realtime chat app with rooms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Brad Traversy",
+  "license": "MIT",
+  "dependencies": {
+    "@socket.io/redis-adapter": "^7.2.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "redis": "^4.6.5",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

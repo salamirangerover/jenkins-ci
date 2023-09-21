@@ -1,13 +1,13 @@
-FROM node:18
+FROM node:14.21
 
 WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install 
 
 COPY . .
 
-EXPOSE 12600
+EXPOSE 3001
 
 CMD [ "node", "server.js" ]
