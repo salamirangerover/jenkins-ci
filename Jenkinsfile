@@ -21,6 +21,7 @@ pipeline {
         stage('Run') {
             steps {
                 sh 'docker run --rm -p 3005:3001 chatcord'
+                sleep 10
             }
         }
 
