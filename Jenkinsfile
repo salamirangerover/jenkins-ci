@@ -15,13 +15,13 @@ pipeline {
             steps {
                 sh 'node --version'
                 sleep 10
-            }
-        }
+                script {
+                    waitUntil {
+                        def response = sh(returnStdout: true, script: 'curl -sL -w "%{http_code}" http://localhost:3005 -o /dev/null').trim()
+                        return response == '200'
+                    }
+                }
 
-        stage('Run') {
-            steps {
-                sh 'docker run --rm -p 3005:3001 chatcord'
-                sleep 10
             }
         }
 
@@ -35,12 +35,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Stop') {
-            steps {
-                sh 'docker rm -f chatcord'
-            }
-        }
-       
+      
     }
 }
