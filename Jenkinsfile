@@ -10,7 +10,7 @@ pipeline {
 
 	stage('Run') {
             steps {
-                sh 'docker run -d -p 3005:3001 chatcord'
+                sh 'docker run -rm -p 3005:3001 chatcord'
             }
         }
     }
