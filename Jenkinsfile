@@ -7,6 +7,11 @@ pipeline {
                 sh 'docker build -t chatcord .'
             }
         }
+
+	stage('Scan') {
+	    steps {
+		sh 'trivy chatcord'
+	}
      
     }
 }
