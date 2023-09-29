@@ -11,7 +11,7 @@ pipeline {
 	stage('Scan') {
 	    steps {
 		sh 'trivy chatcord'
-	}
-     
+	    }
+        }     
     }
 }
