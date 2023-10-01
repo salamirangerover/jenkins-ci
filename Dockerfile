@@ -9,7 +9,7 @@ RUN npm ci --only=production
 
 COPY . .
 
-RUN npm install
+# RUN npm install
 
 # Stage 2: Create the final image
 FROM gcr.io/distroless/nodejs:14
