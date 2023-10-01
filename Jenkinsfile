@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     // Проверяем, установлен ли Trivy
-                    def trivyInstalled = sh(returnStatus: true, script: 'which trivy').status == 0
+                    def trivyInstalled = sh(script: 'which trivy', returnStdout: true).trim()
                     
                     if (trivyInstalled) {
                         // Trivy уже установлен, выполняем сканирование образа chatcord
