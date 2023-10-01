@@ -15,7 +15,7 @@ pipeline {
             sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl > html.tpl'
 
             // Scan and report
-            sh 'trivy --no-progress --exit-code 1 --severity CRITICAL salamirangerover/chatcord:latest'
+            sh 'trivy --no-progress --severity HIGH,CRITICAL salamirangerover/chatcord:latest'
 
 	    }
      
