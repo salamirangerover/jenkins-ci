@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcpmalko')
+        // GOOGLE_APPLICATION_CREDENTIALS = credentials('gcpmalko')
         GCP_LOCATION = 'europe-west1'
         IMAGE_NAME = 'chatcord'
         ARTIFACT_REPOSITORY = 'gcpmalko-docker-repo'
