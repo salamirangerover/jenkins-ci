@@ -15,6 +15,7 @@ pipeline {
                 sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl > html.tpl'
 
                 sh "trivy --no-progress --severity HIGH,CRITICAL ${IMAGE_NAME}:${BUILD_NUMBER}"
-
+	    }
+	}
     }
 }
