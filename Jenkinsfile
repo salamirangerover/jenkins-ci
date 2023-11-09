@@ -1,6 +1,11 @@
 pipeline {
     agent any
     
+    environment {
+        IMAGE_NAME = 'salamirangerover/chatcord_distroless'
+        BUILD_NUMBER = 'latest'
+    }
+
     stages {
         stage('Build') {
             steps {
